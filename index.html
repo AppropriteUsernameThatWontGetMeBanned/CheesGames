@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Chess 
+        </title>
+    <meta charset="UTF-8">
+    </head>
+    <body>
+     <hr>
+      <div style="text-align: center;">
+        <p style="font-size: 100px;" id = "p1">6 - 1</p>
+      </div>
+     <hr>
+     <script>
+        let x = 1;
+        function ShowDraws(){
+    if (x == 1){
+        x = 2;
+        document.getElementById("p1").textContent = "7 - 2"
+        document.getElementById("button1").textContent = "don't count draws"
+    }else if (x == 2){
+        x = 1;
+        document.getElementById("p1").textContent = "6 - 1"
+        document.getElementById("button1").textContent = "count draws"
+    }
+    
+    
+}
+
+     </script>
+     <button onclick = "ShowDraws()" id = "button1">
+        Count draws
+     </button>
+     <h3>Chess.com</h3>
+     <a href = "https://www.chess.com/">
+        <img src = "images/logo.png" height="100px" width="200px">
+     </a>
+     <!--GYATT--> 
+
+    </body>
+</html>
