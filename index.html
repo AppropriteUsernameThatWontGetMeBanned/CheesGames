@@ -32,6 +32,35 @@
   
     
 }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function CreateElement(){
+   const img = document.createElement("img");
+   img.id = "Hancock";
+   img.width = 5000;
+   img.height = 5000;
+   img.style.position = "fixed";   // or "absolute", "relative"
+   img.style.top = "200px";         // distance from top of viewport or parent
+   img.style.left = "10px";       // distance from left
+
+   img.src = "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/11/one-piece-boa-hancock-s-best-outfits-ranked-featured-image.jpg";
+   document.body.appendChild(img);
+}
+
+function DestroyElement(){
+    const img = document.getElementById("Hancock");
+    if(img) img.remove();
+}
+
+async function demo() {
+  CreateElement();
+  await sleep(500);
+  DestroyElement();
+}
+
+demo();
 
      </script>
    
@@ -69,6 +98,6 @@
         <img src = "images0/logo.png" height="100px" width="200px">
      </a>
      <!--Virus was inserted to you device--> 
-
+    
     </body>
 </html>
