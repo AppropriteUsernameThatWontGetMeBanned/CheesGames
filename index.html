@@ -11,26 +11,139 @@
     <body>
      <hr>
      <div style="text-align: center;">
-    <p style="font-size: 150px; color: #d6d9c6;" id="p1">6 - 1</p>
+    <p style="font-size: 150px; color: #d6d9c6;" id="p1" >6 - 1</p>
 </div>
 
      <hr>
-     <script>
-        let x = 1;
-        function ShowDraws(){
-    if (x == 1){
-        x = 2;
+
+
+    <div style="display: flex; gap: 12px;">
+    <button onclick = "ShowDraws()" id = "button1">
+        Count draws
+     </button>
+    <button id = "button2" onclick="ShowPrevious()">Previous score</button>
+    <button id = "button3">Count All</button>
+    </div>
+
+
+     <h3 style="color: #d6d9c6; font-family: 'Inter',sans-serif;">Chess.com</h3>
+     <a href = "https://www.chess.com/">
+        <img src = "images0/logo.png" height="100px" width="200px">
+     </a>
+         <style>
+#button1 {
+    font-family: 'Inter', sans-serif;
+    background-color: #7ea550;
+    color: #d6d9c6;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 1s, box-shadow 1s;
+}
+
+#button1:hover {
+    background-color: #99c172;
+    box-shadow: 0 0 5px rgba(162, 255, 162, 0.4),
+                0 0 10px rgba(173, 255, 143, 0.3);
+}
+
+#button1:focus {
+    outline: none;
+}
+
+#button2 {
+    font-family: 'Inter', sans-serif;
+    background-color: #7ea550;
+    color: #d6d9c6;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 1s, box-shadow 1s;
+}
+
+#button2:hover {
+    background-color: #99c172;
+    box-shadow: 0 0 5px rgba(162, 255, 162, 0.4),
+                0 0 10px rgba(173, 255, 143, 0.3);
+}
+
+#button2:focus {
+    outline: none;
+}
+#button3 {
+    font-family: 'Inter', sans-serif;
+    background-color: #7ea550;
+    color: #d6d9c6;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 1s, box-shadow 1s;
+}
+
+#button3:hover {
+    background-color: #99c172;
+    box-shadow: 0 0 5px rgba(162, 255, 162, 0.4),
+                0 0 10px rgba(173, 255, 143, 0.3);
+}
+
+#button3:focus {
+    outline: none;
+}
+
+
+       
+    </style>
+     <!--Virus was inserted to you device--> 
+         <script>
+        let y = 0;
+        let z = 2;
+        let text = "6 - 1";
+function ShowDraws(){
+    if (text == "6 - 1"){
+        text = "7 - 2";
         document.getElementById("p1").textContent = "7 - 2"
         document.getElementById("button1").textContent = "Don't count draws"
-    }else if (x == 2){
-        x = 1;
+    }else if (text == "7 - 2"){
         document.getElementById("p1").textContent = "6 - 1"
         document.getElementById("button1").textContent = "Count draws"
+        text = "6 - 1";
+    }else if (document.getElementById("p1").textContent == "20 - 15"){
+         document.getElementById("p1").textContent = "22 - 17"
+         document.getElementById("button1").textContent = "Don't count draws"
+    }else if ( document.getElementById("p1").textContent == "22 - 17"){
+         document.getElementById("p1").textContent = "20 - 15"
+         document.getElementById("button1").textContent = "Count draws"
     }
+
+   
     
 
   
     
+}
+
+function ShowPrevious(){
+    if (y == 0){
+        y = 2;    
+        document.getElementById("p1").textContent = "20 - 15"
+        document.getElementById("button2").textContent = "Unshow previous score"
+        if (text == "7 - 2"){
+            document.getElementById("p1").textContent = "22 - 17"
+        }
+    }else if (y == 2){
+        y = 0;
+        document.getElementById("p1").textContent = text;
+        document.getElementById("button2").textContent = "Show previous"
+    }
 }
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -42,7 +155,7 @@ function CreateElement(){
    img.width = 5000;
    img.height = 5000;
    img.style.position = "fixed";   // or "absolute", "relative"
-   img.style.top = "200px";         // distance from top of viewport or parent
+   img.style.top = "1px";         // distance from top of viewport or parent
    img.style.left = "10px";       // distance from left
 
    img.src = "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/11/one-piece-boa-hancock-s-best-outfits-ranked-featured-image.jpg";
@@ -64,40 +177,5 @@ demo();
 
      </script>
    
-    <style>
-#button1 {
-    font-family: 'Inter', sans-serif;
-    background-color: #7ea550;
-    color: #d6d9c6;
-    font-size: 16px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#button1:hover {
-    background-color: #99c172;
-    box-shadow: 0 0 5px rgba(162, 255, 162, 0.4), 0 0 10px rgba(173, 255, 143, 0.3); /* Weaker glow effect */
-}
-
-#button1:focus {
-    outline: none;
-}
-
-
-       
-    </style>
-     <button onclick = "ShowDraws()" id = "button1">
-        Count draws
-     </button>
-     <h3 style="color: #d6d9c6; font-family: 'Inter',sans-serif;">Chess.com</h3>
-     <a href = "https://www.chess.com/">
-        <img src = "images0/logo.png" height="100px" width="200px">
-     </a>
-     <!--Virus was inserted to you device--> 
-    
     </body>
 </html>
