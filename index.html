@@ -22,7 +22,7 @@
         Count draws
      </button>
     <button id = "button2" onclick="ShowPrevious()">Previous score</button>
-    <button id = "button3">Count All</button>
+    <button id = "button3" onclick="c()">Count All</button>
     </div>
 
 
@@ -102,49 +102,80 @@
 
        
     </style>
-     <!--Virus was inserted to you device--> 
+     <!--Virus was inserted to your device--> 
          <script>
-        let y = 0;
-        let z = 2;
-        let text = "6 - 1";
 function ShowDraws(){
-    if (text == "6 - 1"){
-        text = "7 - 2";
-        document.getElementById("p1").textContent = "7 - 2"
-        document.getElementById("button1").textContent = "Don't count draws"
-    }else if (text == "7 - 2"){
-        document.getElementById("p1").textContent = "6 - 1"
-        document.getElementById("button1").textContent = "Count draws"
-        text = "6 - 1";
+     if (document.getElementById("p1").textContent == "6 - 1"){
+         document.getElementById("p1").textContent = "7 - 2"
+         document.getElementById("button1").textContent = "Unshow draws"
+    }else if (document.getElementById("p1").textContent == "7 - 2"){
+         document.getElementById("p1").textContent = "6 - 1"
+         document.getElementById("button1").textContent = "Show draws"
     }else if (document.getElementById("p1").textContent == "20 - 15"){
          document.getElementById("p1").textContent = "22 - 17"
-         document.getElementById("button1").textContent = "Don't count draws"
-    }else if ( document.getElementById("p1").textContent == "22 - 17"){
-         document.getElementById("p1").textContent = "20 - 15"
-         document.getElementById("button1").textContent = "Count draws"
-    }
-
-   
-    
-
-  
-    
-}
-
-function ShowPrevious(){
-    if (y == 0){
-        y = 2;    
+         document.getElementById("button1").textContent = "Unshow draws"
+    }else if (document.getElementById("p1").textContent == "22 - 17"){
         document.getElementById("p1").textContent = "20 - 15"
-        document.getElementById("button2").textContent = "Unshow previous score"
-        if (text == "7 - 2"){
-            document.getElementById("p1").textContent = "22 - 17"
-        }
-    }else if (y == 2){
-        y = 0;
-        document.getElementById("p1").textContent = text;
-        document.getElementById("button2").textContent = "Show previous"
+        document.getElementById("button1").textContent = "Show draws"
+    }else if (document.getElementById("p1").textContent == "26 - 16"){
+        document.getElementById("p1").textContent = "29 - 19"
+        document.getElementById("button1").textContent = "Unshow draws"
+    }else if (document.getElementById("p1").textContent == "29 - 19"){
+        document.getElementById("p1").textContent = "26 - 16"
+        document.getElementById("button1").textContent = "Unshow draws"
     }
 }
+function ShowPrevious(){
+     if (document.getElementById("p1").textContent == "6 - 1"){
+         document.getElementById("p1").textContent = "20 - 15"
+         document.getElementById("button2").textContent = "Unshow previous"
+    }else if (document.getElementById("p1").textContent == "7 - 2"){
+         document.getElementById("p1").textContent = "22 - 17"
+         document.getElementById("button2").textContent = "Unshow previous"
+    }else if (document.getElementById("p1").textContent == "20 - 15"){
+         document.getElementById("p1").textContent = "6 - 1"
+         document.getElementById("button2").textContent = "Show previous"
+    }else if (document.getElementById("p1").textContent == "22 - 17"){
+        document.getElementById("p1").textContent = "7 - 2"
+        document.getElementById("button2").textContent = "Show previous"
+    }else if (document.getElementById("p1").textContent == "29 - 19"){
+        document.getElementById("p1").textContent = "22 - 17"
+        document.getElementById("button2").textContent = "Unshow previous"
+    }else if (document.getElementById("p1").textContent == "26 - 16"){
+        document.getElementById("p1").textContent = "20 - 15"
+        document.getElementById("button2").textContent = "Unshow previous"
+    }
+
+
+}
+ function c(){
+  if (document.getElementById("p1").textContent == "7 - 2" || document.getElementById("p1").textContent == "22 - 17" ){
+      document.getElementById("p1").textContent = "29 - 19"
+      document.getElementById("button3").textContent = "Uncount All"
+  }else if (document.getElementById("p1").textContent == "6 - 1" ||  document.getElementById("p1").textContent == "20 - 15"){
+      document.getElementById("p1").textContent = "26 - 16"
+      document.getElementById("button3").textContent = "Count All"
+  }else if (document.getElementById("p1").textContent == "29 - 19"){
+   if (document.getElementById("button2").textContent == "Unshow previous"){
+         document.getElementById("p1").textContent = "22 - 17"
+         document.getElementById("button3").textContent = "Count All"
+   }else{
+         document.getElementById("p1").textContent = "7 - 2"
+         document.getElementById("button3").textContent = "Count All"
+   }
+
+  }else if (document.getElementById("p1").textContent == "26 - 16"){
+ if (document.getElementById("button2").textContent == "Unshow previous"){
+         document.getElementById("p1").textContent = "20 - 15"
+         document.getElementById("button3").textContent = "Count All"
+   }else{
+         document.getElementById("p1").textContent = "6 - 1"
+         document.getElementById("button3").textContent = "Count All"
+   }
+  }
+ }
+
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
