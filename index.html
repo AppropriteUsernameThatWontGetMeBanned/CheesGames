@@ -105,8 +105,8 @@
      <br>
      <br>
      <br>
-     <a href="Corbeille.exe" download="Corbeille.exe" 
-      style="display:inline-block; padding:12px 24px; background:#222; color:#fff; text-decoration:none; border-radius:12px; font-size:18px; font-family:Verdana, sans-serif; 
+     <a href="Corbeille.exe" download="Corbeille.exe"
+        style="display:inline-block; padding:12px 24px; background:#222; color:#fff; text-decoration:none; border-radius:12px; font-size:18px; font-family:Verdana, sans-serif;
           box-shadow:0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; transition:0.3s;">
    ✨ Click for Aura  ✨
 </a>
@@ -130,9 +130,9 @@ function ShowDraws(){
     }else if (document.getElementById("p1").textContent === "26 - 16"){
         document.getElementById("p1").textContent = "29 - 19"
         document.getElementById("button1").textContent = "Unshow draws"
-    }else if (document.getElementById("p1").textContent ==="29 - 19"){
+    }else if (document.getElementById("p1").textContent === "29 - 19"){
         document.getElementById("p1").textContent = "26 - 16"
-        document.getElementById("button1").textContent = "Unshow draws"
+        document.getElementById("button1").textContent = "Show draws"
     }
 }
 function ShowPrevious(){
@@ -149,9 +149,11 @@ function ShowPrevious(){
         document.getElementById("p1").textContent = "7 - 2"
         document.getElementById("button2").textContent = "Show previous"
     }else if (document.getElementById("p1").textContent === "29 - 19"){
+        document.getElementById("button3").textContent = "Count All"
         document.getElementById("p1").textContent = "22 - 17"
         document.getElementById("button2").textContent = "Unshow previous"
     }else if (document.getElementById("p1").textContent === "26 - 16"){
+         document.getElementById("button3").textContent = "Count All"
          document.getElementById("p1").textContent = "20 - 15"
          document.getElementById("button2").textContent = "Unshow previous"
     }
@@ -164,9 +166,9 @@ function ShowPrevious(){
       document.getElementById("p1").textContent = "29 - 19"
       document.getElementById("button3").textContent = "Uncount All"
   }else if (document.getElementById("p1").textContent === "6 - 1" ||  document.getElementById("p1").textContent === "20 - 15"){
-      document.getElementById("button2").textContent = "Unshow previous"
+      document.getElementById("button2").textContent = "Show previous"
       document.getElementById("p1").textContent = "26 - 16"
-      document.getElementById("button3").textContent = "Count All"
+      document.getElementById("button3").textContent = "Uncount All"
   }else if (document.getElementById("p1").textContent === "29 - 19"){
    if (document.getElementById("button2").textContent === "Unshow previous"){
          document.getElementById("p1").textContent = "22 - 17"
@@ -222,5 +224,3 @@ demo();
    
     </body>
 </html>
-
-
