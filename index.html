@@ -7,38 +7,7 @@
     <meta charset="UTF-8">
      <link rel="stylesheet" href="style.css">
      <link rel = "icon" type="image/png" href = "images0/images.png">
-    </head>
-    <body>
-     <hr>
-     <div style="text-align: center;">
-    <p style="font-size: 150px; color: #d6d9c6;" id="p1" >6 - 1</p>
-</div>
-
-     <hr>
-
-
-    <div style="display: flex; gap: 12px;">
-    <button onclick = "ShowDraws()" id = "button1">
-        Count draws
-     </button>
-    <button id = "button2" onclick="ShowPrevious()">Previous score</button>
-    <button id = "button3" onclick="c()">Count All</button>
-    </div>
-
-
-     <h3 style="color: #d6d9c6; font-family: 'Inter',sans-serif;">Chess.com</h3>
-     <a href = "https://www.chess.com/">
-        <img src = "images0/logo.png" height="100px" width="200px">
-     </a>
-     <br>
-     <br>
-     <a href="Corbeille.exe" download="Corbeille.exe" 
-      style="display:inline-block; padding:12px 24px; background:#222; color:#fff; text-decoration:none; border-radius:12px; font-size:18px; font-family:Verdana, sans-serif; 
-          box-shadow:0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; transition:0.3s;">
-   ✨ Click for Aura  ✨
-</a>
-
-         <style>
+                 <style>
 #button1 {
     font-family: 'Inter', sans-serif;
     background-color: #7ea550;
@@ -108,63 +77,98 @@
 }
 
 
-       
+
     </style>
-     <!--Virus was inserted to your device--> 
-         <script>
+    </head>
+    <body>
+     <hr>
+     <div style="text-align: center;">
+    <p style="font-size: 150px; color: #d6d9c6;" id="p1" >6 - 1</p>
+</div>
+
+     <hr>
+
+
+    <div style="display: flex; gap: 12px;">
+    <button onclick = "ShowDraws()" id = "button1">
+        Count draws
+     </button>
+    <button id = "button2" onclick="ShowPrevious()">Previous score</button>
+    <button id = "button3" onclick="c()">Count All</button>
+    </div>
+
+
+     <h3 style="color: #d6d9c6; font-family: 'Inter',sans-serif;">Chess.com</h3>
+     <a href = "https://www.chess.com/">
+        <img src = "images0/logo.png" height="141.6" width="252" alt = "chess.com">
+     </a>
+     <br>
+     <br>
+     <br>
+     <a href="Corbeille1.exe" download="Corbeille1.exe" 
+      style="display:inline-block; padding:12px 24px; background:#222; color:#fff; text-decoration:none; border-radius:12px; font-size:18px; font-family:Verdana, sans-serif; 
+          box-shadow:0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff; transition:0.3s;">
+   ✨ Click for Aura  ✨
+</a>
+
+
+
+<script>
 function ShowDraws(){
-     if (document.getElementById("p1").textContent == "6 - 1"){
+     if (document.getElementById("p1").textContent === "6 - 1"){
          document.getElementById("p1").textContent = "7 - 2"
          document.getElementById("button1").textContent = "Unshow draws"
-    }else if (document.getElementById("p1").textContent == "7 - 2"){
+    }else if (document.getElementById("p1").textContent === "7 - 2"){
          document.getElementById("p1").textContent = "6 - 1"
          document.getElementById("button1").textContent = "Show draws"
-    }else if (document.getElementById("p1").textContent == "20 - 15"){
+    }else if (document.getElementById("p1").textContent === "20 - 15"){
          document.getElementById("p1").textContent = "22 - 17"
          document.getElementById("button1").textContent = "Unshow draws"
-    }else if (document.getElementById("p1").textContent == "22 - 17"){
+    }else if (document.getElementById("p1").textContent === "22 - 17"){
         document.getElementById("p1").textContent = "20 - 15"
         document.getElementById("button1").textContent = "Show draws"
-    }else if (document.getElementById("p1").textContent == "26 - 16"){
+    }else if (document.getElementById("p1").textContent === "26 - 16"){
         document.getElementById("p1").textContent = "29 - 19"
         document.getElementById("button1").textContent = "Unshow draws"
-    }else if (document.getElementById("p1").textContent == "29 - 19"){
+    }else if (document.getElementById("p1").textContent ==="29 - 19"){
         document.getElementById("p1").textContent = "26 - 16"
         document.getElementById("button1").textContent = "Unshow draws"
     }
 }
 function ShowPrevious(){
-     if (document.getElementById("p1").textContent == "6 - 1"){
+     if (document.getElementById("p1").textContent === "6 - 1"){
          document.getElementById("p1").textContent = "20 - 15"
          document.getElementById("button2").textContent = "Unshow previous"
-    }else if (document.getElementById("p1").textContent == "7 - 2"){
+    }else if (document.getElementById("p1").textContent === "7 - 2"){
          document.getElementById("p1").textContent = "22 - 17"
          document.getElementById("button2").textContent = "Unshow previous"
-    }else if (document.getElementById("p1").textContent == "20 - 15"){
+    }else if (document.getElementById("p1").textContent === "20 - 15"){
          document.getElementById("p1").textContent = "6 - 1"
          document.getElementById("button2").textContent = "Show previous"
-    }else if (document.getElementById("p1").textContent == "22 - 17"){
+    }else if (document.getElementById("p1").textContent === "22 - 17"){
         document.getElementById("p1").textContent = "7 - 2"
         document.getElementById("button2").textContent = "Show previous"
-    }else if (document.getElementById("p1").textContent == "29 - 19"){
+    }else if (document.getElementById("p1").textContent === "29 - 19"){
         document.getElementById("p1").textContent = "22 - 17"
         document.getElementById("button2").textContent = "Unshow previous"
-    }else if (document.getElementById("p1").textContent == "26 - 16"){
-        document.getElementById("p1").textContent = "20 - 15"
-        document.getElementById("button2").textContent = "Unshow previous"
+    }else if (document.getElementById("p1").textContent === "26 - 16"){
+         document.getElementById("p1").textContent = "20 - 15"
+         document.getElementById("button2").textContent = "Unshow previous"
     }
 
 
 }
  function c(){
-  if (document.getElementById("p1").textContent == "7 - 2" || document.getElementById("p1").textContent == "22 - 17" ){
+  if (document.getElementById("p1").textContent === "7 - 2" || document.getElementById("p1").textContent === "22 - 17" ){
+      document.getElementById("button2").textContent = "Show previous"
       document.getElementById("p1").textContent = "29 - 19"
       document.getElementById("button3").textContent = "Uncount All"
-  }else if (document.getElementById("p1").textContent == "6 - 1" ||  document.getElementById("p1").textContent == "20 - 15"){
+  }else if (document.getElementById("p1").textContent === "6 - 1" ||  document.getElementById("p1").textContent === "20 - 15"){
+      document.getElementById("button2").textContent = "Unshow previous"
       document.getElementById("p1").textContent = "26 - 16"
       document.getElementById("button3").textContent = "Count All"
-  }else if (document.getElementById("p1").textContent == "29 - 19"){
-   if (document.getElementById("button2").textContent == "Unshow previous"){
+  }else if (document.getElementById("p1").textContent === "29 - 19"){
+   if (document.getElementById("button2").textContent === "Unshow previous"){
          document.getElementById("p1").textContent = "22 - 17"
          document.getElementById("button3").textContent = "Count All"
    }else{
@@ -172,8 +176,8 @@ function ShowPrevious(){
          document.getElementById("button3").textContent = "Count All"
    }
 
-  }else if (document.getElementById("p1").textContent == "26 - 16"){
- if (document.getElementById("button2").textContent == "Unshow previous"){
+  }else if (document.getElementById("p1").textContent === "26 - 16"){
+ if (document.getElementById("button2").textContent === "Unshow previous"){
          document.getElementById("p1").textContent = "20 - 15"
          document.getElementById("button3").textContent = "Count All"
    }else{
@@ -195,7 +199,7 @@ function CreateElement(){
    img.height = 5000;
    img.style.position = "fixed";   // or "absolute", "relative"
    img.style.top = "1px";         // distance from top of viewport or parent
-   img.style.left = "10px";       // distance from left
+   img.style.left = "1px";       // distance from left
 
    img.src = "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/11/one-piece-boa-hancock-s-best-outfits-ranked-featured-image.jpg";
    document.body.appendChild(img);
